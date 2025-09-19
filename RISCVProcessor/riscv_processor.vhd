@@ -12,7 +12,7 @@ entity riscv_processor is
     );
 end riscv_processor;
 
-architecture Behavioral of riscv_processor is
+architecture Structural of riscv_processor is
     component adder is
         port (
             op1 : in STD_LOGIC_VECTOR(31 downto 0);
@@ -280,4 +280,4 @@ PC : program_counter
     -- LED output shows lower 12 bits of PC
     led <= pc_i(11 downto 0);
 
-end Behavioral;
+end Structural;
